@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%8C%3C/text%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#000000" />
+    <title>灵界 1.2026810.916.Extremely unstable</title>
+    <script src="./assets/jszip.min.js"></script>
+    <script type="module" crossorigin src="./assets/index-readable.js?v=v55-quick-lock-widget-20260905"></script>
+    <script defer src="./assets/onboarding.js?v=onboarding-v7-quick-lock-20260905"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BhFu6szX.css?v=v3-20260718" />
+    <style id="lock-viewport-style">
+      :root {
+        --vh: 1vh;
+        --safe-top: env(safe-area-inset-top, 0px);
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-left: env(safe-area-inset-left, 0px);
+        --safe-right: env(safe-area-inset-right, 0px);
+      }
+      /* 窗口渲染优化：非活跃窗口冻结 */
+      .is-frozen { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+      .is-frozen * { animation-play-state: paused !important; }
+      .is-frozen .shimmer-sweep { background: #000 !important; position: relative; overflow: hidden; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+      .is-frozen .shimmer-sweep::after,
+      .is-frozen .shimmer-sweep:after {
+        content: none !important;
+        display: none !important;
+        animation: none !important;
+        background: none !important;
+        visibility: hidden !important;
+      }
+      html, body, #root {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        margin: 0;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      input, textarea, [contenteditable="true"] {
+        touch-action: manipulation;
+        -webkit-user-select: text;
+        user-select: text;
+        font-size: 16px;
+      }
+      [class*="overflow-auto"], [class*="overflow-y-auto"], [class*="overflow-x-auto"] {
+        touch-action: pan-y;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+      }
+      @media (orientation: portrait) {
+        .landscape-only { display: none !important; }
+      }
+      @media (orientation: landscape) and (max-height: 500px) {
+        .compact-hide { display: none !important; }
+      }
+      @keyframes lingjieBootFadeIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+      @keyframes lingjieFadeOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.92); } }
+      @keyframes lingjieSlideInRight { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+      @keyframes lingjieSlideOutRight { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(20px); } }
+      @keyframes lingjieFadeInUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes lingjieFadeOutDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(12px); } }
+      @keyframes lingjieScaleIn { from { opacity: 0; transform: scale(0.85); } to { opacity: 1; transform: scale(1); } }
+      @keyframes lingjieScaleOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.85); } }
+      @keyframes lingjieSlideInLeft { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+      @keyframes lingjieWindowClose { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.8); } }
+      @keyframes lingjieToastIn { from { opacity: 0; transform: translateY(-10px) scale(0.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      @keyframes lingjieToastOut { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(-10px) scale(0.9); } }
+      .lingjie-anim-fade-in { animation: lingjieBootFadeIn 0.25s ease-out; }
+      .lingjie-anim-fade-out { animation: lingjieFadeOut 0.2s ease-in forwards; }
+      .lingjie-anim-scale-in { animation: lingjieScaleIn 0.22s ease-out; }
+      .lingjie-anim-scale-out { animation: lingjieScaleOut 0.18s ease-in forwards; }
+      .lingjie-anim-slide-in-right { animation: lingjieSlideInRight 0.25s ease-out; }
+      .lingjie-anim-slide-out-right { animation: lingjieSlideOutRight 0.2s ease-in forwards; }
+      .lingjie-anim-fade-in-up { animation: lingjieFadeInUp 0.28s ease-out; }
+      .lingjie-anim-fade-out-down { animation: lingjieFadeOutDown 0.2s ease-in forwards; }
+      .lingjie-anim-toast-in { animation: lingjieToastIn 0.25s ease-out; }
+      .lingjie-anim-toast-out { animation: lingjieToastOut 0.2s ease-in forwards; }
+      .lingjie-tab-enter { animation: lingjieFadeInUp 0.22s ease-out; }
+
+      @keyframes lingjieDockFlow {
+        0% { transform: translateX(-130%) skewX(-18deg); }
+        100% { transform: translateX(320%) skewX(-18deg); }
+      }
+      @keyframes lingjieDockAura {
+        0%, 100% { box-shadow: 0 22px 60px rgba(0,0,0,0.28), inset 0 1px rgba(255,255,255,0.18), 0 0 16px rgba(56,189,248,0.12); }
+        50% { box-shadow: 0 22px 60px rgba(0,0,0,0.28), inset 0 1px rgba(255,255,255,0.32), 0 0 28px rgba(125,211,252,0.38); }
+      }
+      @keyframes lingjieRunningGlow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(103,232,249,0.15); opacity: 1; }
+        50% { box-shadow: 0 0 10px 2px rgba(103,232,249,0.75); opacity: 0.9; }
+      }
+      @keyframes lingjieNebulaFlow {
+        0% { transform: translateX(-80%) translateY(-20%) rotate(12deg); }
+        100% { transform: translateX(180%) translateY(20%) rotate(12deg); }
+      }
+      @keyframes lingjieIslandShine {
+        0% { transform: translateX(-120%) skewX(-16deg); }
+        100% { transform: translateX(240%) skewX(-16deg); }
+      }
+      .lingjie-dock-glow {
+        animation: lingjieDockAura 4s ease-in-out infinite;
+      }
+      .lingjie-dock-flow-layer,
+      .lingjie-nebula-flow-layer,
+      .lingjie-island-flow-layer {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .lingjie-dock-flow-layer {
+        border-radius: 9999px;
+      }
+      .lingjie-dock-flow-layer::after {
+        content: "";
+        position: absolute;
+        top: -30%;
+        left: 0;
+        width: 42%;
+        height: 160%;
+        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 25%, rgba(165,243,252,0.55) 50%, rgba(196,181,253,0.35) 68%, transparent 100%);
+        animation: lingjieDockFlow 4.6s ease-in-out infinite;
+      }
+      .lingjie-nebula-flow-layer {
+        border-radius: 32px;
+      }
+      .lingjie-nebula-flow-layer::after {
+        content: "";
+        position: absolute;
+        top: -40%;
+        left: 0;
+        width: 36%;
+        height: 180%;
+        background: linear-gradient(115deg, transparent, rgba(255,255,255,0.16), rgba(125,211,252,0.22), transparent);
+        animation: lingjieNebulaFlow 5.4s ease-in-out infinite;
+      }
+      .lingjie-island-flow-layer {
+        border-radius: 9999px;
+      }
+      .lingjie-island-flow-layer::after {
+        content: "";
+        position: absolute;
+        top: -25%;
+        left: 0;
+        width: 38%;
+        height: 150%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+        animation: lingjieIslandShine 5s ease-in-out infinite;
+      }
+      .lingjie-running-dot {
+        animation: lingjieRunningGlow 1.8s ease-in-out infinite;
+      }
+      .lingjie-dock-btn {
+        position: relative;
+        z-index: 1;
+      }
+      .lingjie-dock-btn:hover {
+        box-shadow: 0 0 18px rgba(125, 211, 252, 0.42);
+      }
+      .lingjie-status-glow {
+        animation: lingjieDockAura 5.2s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .lingjie-dock-glow,
+        .lingjie-dock-flow-layer::after,
+        .lingjie-nebula-flow-layer::after,
+        .lingjie-island-flow-layer::after,
+        .lingjie-running-dot,
+        .lingjie-status-glow {
+          animation: none;
+        }
+      }
+    </style>
+    <script>
+      (function() {
+        function setVH() {
+          document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+        }
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', function() { setTimeout(setVH, 100); });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // 系统级蓝屏：捕获所有未处理运行时错误（同步 + Promise）
+      (function() {
+        var _locked = false;
+
+        function esc(s) {
+          return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function showBsod(errMsg, title, sub) {
+          if (_locked) return;
+          _locked = true;
+          // 蓝屏锁：保留 lingjie-bsod 标记，设置锁定标记，阻止 React 挂载覆盖
+          try { sessionStorage.setItem('lingjie-bsod-locked', '1'); } catch(e) {}
+          var r = document.getElementById('root');
+          if (!r) return;
+          r.parentElement.style.cssText = 'margin:0;padding:0;overflow:hidden;background:#0078d4;font-family:system-ui,-apple-system,sans-serif;color:#fff;';
+          r.style.cssText = 'display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100vh;height:100dvh;padding:0 24px;box-sizing:border-box;';
+          var safe = esc(errMsg);
+          var timeHtml = '';
+          try {
+            var t = sessionStorage.getItem('lingjie-bsod-time');
+            if (t) {
+              var sec = Math.round((Date.now() - parseInt(t, 10)) / 1000);
+              timeHtml = '<p style="font-size:12px;margin:0 0 8px 0;opacity:0.5;">' + sec + ' 秒前发生</p>';
+            }
+          } catch(e) {}
+          r.innerHTML =
+            '<div style="max-width:500px;width:100%;text-align:center;">' +
+              '<div style="font-size:100px;margin-bottom:12px;line-height:1;">:(</div>' +
+              '<h1 style="font-size:26px;font-weight:700;margin:0 0 10px 0;">' + esc(title || '系统崩溃') + '</h1>' +
+              '<p style="font-size:14px;margin:0 0 6px 0;opacity:0.85;">' + esc(sub || '核心代码运行时出错') + '</p>' +
+              timeHtml +
+              '<p style="font-size:13px;margin:0 0 28px 0;opacity:0.7;word-break:break-all;">' + safe + '</p>' +
+              '<button onclick="try{sessionStorage.clear();sessionStorage.setItem(\'lingjie-restart-lock\',\'1\');sessionStorage.setItem(\'lingjie-restart-anim\',\'1\');}catch(e){};location.reload();" style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:8px;color:#fff;font-size:15px;padding:12px 32px;cursor:pointer;">重启灵界 OS</button>' +
+            '</div>';
+        }
+
+        // 页面加载时检查标记（来自上一轮错误或彩蛋）
+        try {
+          var saved = sessionStorage.getItem('lingjie-bsod');
+          var easterEgg = sessionStorage.getItem('lingjie-bsod-easter-egg');
+          if (saved) {
+            showBsod(saved, '系统崩溃', '核心代码运行时出错');
+            return;
+          }
+          if (easterEgg) {
+            showBsod(easterEgg, '蓝屏彩蛋', '这是终端触发的彩蛋蓝屏');
+            return;
+          }
+        } catch(e) {}
+
+        // 启动超时检测：核心模块 15 秒未就绪则蓝屏
+        var startTime = Date.now();
+        var timer = setInterval(function() {
+          if (window.__LINGJIE_READY) { clearInterval(timer); return; }
+          if (sessionStorage.getItem('lingjie-bsod')) { clearInterval(timer); return; }
+          try {
+            if (Date.now() - startTime > 15000 && !sessionStorage.getItem('lingjie-bsod')) {
+              sessionStorage.setItem('lingjie-bsod', '系统启动超时（核心模块 15 秒未响应）');
+              sessionStorage.setItem('lingjie-bsod-time', Date.now());
+              location.reload();
+            }
+          } catch(e) {}
+        }, 500);
+
+        // 捕获所有同步运行时错误
+        window.addEventListener('error', function(ev) {
+          if (_locked) return;
+          var url = ev.filename || ev.target && ev.target.src || '';
+          // 忽略外部资源错误
+          if (url && url.indexOf(location.hostname) === -1 && url.indexOf(location.origin) === -1) {
+            ev.preventDefault();
+            return;
+          }
+          _locked = true;
+          var msg = (ev.message || ev.error && ev.error.message || 'Unknown error') + ' at ' + (ev.filename || '') + ':' + (ev.lineno || '') + ':' + (ev.colno || '');
+          try {
+            sessionStorage.setItem('lingjie-bsod', msg);
+            sessionStorage.setItem('lingjie-bsod-time', Date.now());
+          } catch(e) {}
+          ev.preventDefault();
+          location.reload();
+        });
+
+        // 捕获所有未处理的 Promise rejection
+        window.addEventListener('unhandledrejection', function(ev) {
+          if (_locked) return;
+          _locked = true;
+          var reason = ev.reason;
+          var msg = 'Unhandled Promise rejection: ';
+          if (reason && reason.stack) msg += reason.stack.split('\n')[0];
+          else if (reason && reason.message) msg += reason.message;
+          else msg += String(reason);
+          try {
+            sessionStorage.setItem('lingjie-bsod', msg);
+            sessionStorage.setItem('lingjie-bsod-time', Date.now());
+          } catch(e) {}
+          location.reload();
+        });
+
+      })();
+    </script>
+    <script>
+      // === 弹性回弹：边界拉伸 + 惯性冲撞回弹 ===
+      (function() {
+        'use strict';
+        if (!('ontouchstart' in window)) return;
+
+        var st = null;       // 触摸状态
+        var monitorId = null; // 惯性监控 rAF id
+
+        // 安全取消 rAF：24Hz 模式下 rAF 返回 Symbol，切回默认后原生 CAF 不接受 Symbol
+        function safeCancelRAF(id) {
+          if (id == null) return;
+          try { cancelAnimationFrame(id); } catch(e) {}
+        }
+
+        function findScroll(node) {
+          var el = node;
+          while (el && el !== document.body) {
+            var oy = window.getComputedStyle(el).overflowY;
+            if ((oy === 'auto' || oy === 'scroll') && el.scrollHeight > el.clientHeight + 2) return el;
+            el = el.parentElement;
+          }
+          return null;
+        }
+
+        // 对滚动容器的所有子元素设置 transform
+        function setChildrenTransform(el, px, transition) {
+          var kids = el.children;
+          for (var i = 0; i < kids.length; i++) {
+            kids[i].style.transition = transition || 'none';
+            kids[i].style.transform = px === 0 ? '' : 'translateY(' + px + 'px)';
+          }
+        }
+
+        // 应用一次性弹跳：内容冲过边界，然后用带 overshoot 的 bezier 弹回
+        function applyBounce(el, px) {
+          // 1. 瞬间移动到"冲过头"的位置
+          setChildrenTransform(el, px, 'none');
+          void el.offsetHeight; // 强制 reflow
+          // 2. 带 overshoot 弹回 0
+          setChildrenTransform(el, 0, 'transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1)');
+        }
+
+        // === touchstart：记录滚动容器 ===
+        document.addEventListener('touchstart', function(e) {
+          if (monitorId) { safeCancelRAF(monitorId); monitorId = null; }
+          var el = findScroll(e.target);
+          if (!el) { st = null; return; }
+          st = { el: el, lastY: e.touches[0].clientY, offset: 0 };
+          setChildrenTransform(el, 0, 'none');
+        }, { passive: true });
+
+        // === touchmove：手指拖到边界时拉伸 ===
+        document.addEventListener('touchmove', function(e) {
+          if (!st) return;
+          var y = e.touches[0].clientY;
+          var dy = y - st.lastY;
+          st.lastY = y;
+          var el = st.el;
+          var max = el.scrollHeight - el.clientHeight;
+
+          if (el.scrollTop <= 0 && dy > 0) {
+            st.offset += dy * 0.4;
+            st.offset = Math.min(st.offset, 70);
+            setChildrenTransform(el, st.offset, 'none');
+          } else if (el.scrollTop >= max && dy < 0) {
+            st.offset += dy * 0.4;
+            st.offset = Math.max(st.offset, -70);
+            setChildrenTransform(el, st.offset, 'none');
+          } else if (st.offset !== 0) {
+            st.offset = 0;
+            setChildrenTransform(el, 0, 'none');
+          }
+        }, { passive: true });
+
+        // === touchend：释放拉伸 + 监控惯性冲撞 ===
+        document.addEventListener('touchend', function() {
+          if (!st) return;
+          var el = st.el;
+
+          // 释放拉伸
+          if (st.offset !== 0) {
+            setChildrenTransform(el, 0, 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)');
+          }
+          st = null;
+
+          // 监控原生惯性：检测冲到边界
+          var prevST = el.scrollTop;
+          var prevT = Date.now();
+          var max = el.scrollHeight - el.clientHeight;
+          var deadline = Date.now() + 2000;
+
+          function monitor() {
+            if (Date.now() > deadline) { monitorId = null; return; }
+            var now = Date.now();
+            var curST = el.scrollTop;
+            var dt = now - prevT;
+
+            if (dt > 0) {
+              var vel = (curST - prevST) / dt * 16;
+
+              // 冲到顶部（向上滚，vel 为负）
+              if (curST <= 0 && vel < -1.5) {
+                applyBounce(el, Math.min(Math.abs(vel) * 4, 50));
+                monitorId = null;
+                return;
+              }
+              // 冲到底部（向下滚，vel 为正）
+              if (curST >= max && vel > 1.5) {
+                applyBounce(el, -Math.min(vel * 4, 50));
+                monitorId = null;
+                return;
+              }
+              // 速度归零 → 停止监控
+              if (Math.abs(curST - prevST) < 0.5) {
+                monitorId = null;
+                return;
+              }
+            }
+
+            prevST = curST;
+            prevT = now;
+            monitorId = requestAnimationFrame(monitor);
+          }
+          monitorId = requestAnimationFrame(monitor);
+        }, { passive: true });
+
+        document.addEventListener('touchcancel', function() {
+          if (monitorId) { safeCancelRAF(monitorId); monitorId = null; }
+          if (st && st.offset !== 0) {
+            setChildrenTransform(st.el, 0, 'transform 0.3s');
+          }
+          st = null;
+        }, { passive: true });
+      })();
+    </script>
+  </body>
+</html>
